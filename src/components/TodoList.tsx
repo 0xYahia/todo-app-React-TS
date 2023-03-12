@@ -1,4 +1,5 @@
 import { FC } from "react";
+import "./TodoList.css";
 interface todoListProps {
   items: { id: string; text: string }[];
   onDeleteTodo: (id: string) => void;

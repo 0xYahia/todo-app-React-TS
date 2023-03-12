@@ -1,4 +1,5 @@
 import { FC, FormEvent, useRef } from "react";
+import "./NewTodo.css";
 
 interface newTodoProps {
   onAddTodo: (todoText: string) => void;
@@ -14,7 +15,7 @@ const NewTodo: FC<newTodoProps> = (props) => {
   };
   return (
     <form onSubmit={todoSubmitHandler}>
-      <div>
+      <div className="form-control">
         <label htmlFor="text-todo"></label>
         <input type="text" id="text-todo" ref={textInputRef} />
       </div>
