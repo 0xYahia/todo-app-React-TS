@@ -11,7 +11,9 @@ const NewTodo: FC<newTodoProps> = (props) => {
   const todoSubmitHandler = (event: FormEvent) => {
     event.preventDefault();
     const enterdText = textInputRef.current!.value;
-    props.onAddTodo(enterdText);
+    if (enterdText) {
+      props.onAddTodo(enterdText);
+    }
   };
   return (
     <form onSubmit={todoSubmitHandler}>
